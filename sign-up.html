@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+       .logodiv
+        {
+            width: 100vw;
+            /* height: 4vw; */
+        }
+        .logodiv img{
+            width:100vw;
+            height:10vw;
+        }
+        .wrapper
+        {     
+            background: linear-gradient(to right, #71ace894, #cedff3eb);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .login-page{
+            margin:6vw 30vw;
+            /* background: linear-gradient(to right, #90beef, #d9e1e9); */
+        }
+        form input{
+
+            width: 30vw;
+            margin: 5px;
+            height: 30px;
+            border-radius: 4px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: none;
+            box-shadow: 2px 2px 2px;
+            font-size: large;
+        }
+        form label{
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #role{
+
+             font-size: 1.1rem;
+             font-family:Georgia, 'Times New Roman', Times, serif;
+             border-radius: 5px;
+        }
+        .login-button{
+            width: 10vw;
+            background-color: rgb(249, 167, 152);
+            border-color: none;
+            cursor: pointer;
+            margin-left: 10vw;
+            margin-top: 3vw;
+            font-size: large;
+            box-shadow: 2px 2px 2px;
+        }
+        select{
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="heading">
+
+            <!-- <div ><h3>ASSAM POWER DISTRIBUTION COMPANY LIMITED</h3></div> -->
+
+            <div class="logodiv"> <img src="./resource/apdcl-logo.png" alt="apdcl image" srcset="">  </div>
+
+        </div>
+
+        <div class="login-page">
+
+            
+            <form action="/register" method="post">
+
+                <label for="employeeEmail">Employee Email:</label><br>
+                <input type="text" id="employeeEmail" name="employeeEmail" required><br><br>
+
+               
+
+        <label for="role">Employee Role:</label><br>
+        <select id="role" name="role">
+            <option value="entry_specialist">Data Entry Specialist</option>
+            <option value="analyst">Data Analyst</option>
+        </select><br><br>
+
+        <input type="submit" value="Register"   class="login-button" >
+
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

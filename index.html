@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Document</title>
+
+<style>
+
+
+
+
+
+
+
+body{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.wrapper{
+
+    background: linear-gradient(to right, #e6e8e9, #b6c5dc);
+
+
+}
+
+.heading{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+div img{
+
+    width: 10vw;
+    height: 7vw;
+    border-radius: 4vw;
+    
+
+}
+
+
+h2{
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: rgb(166, 23, 23);
+
+    text-shadow:2px 1px;
+
+}
+
+.h2div{
+
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+.content{
+
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh; 
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 13vw;
+
+
+}
+
+
+.headingcaption{
+
+
+background-color: rgb(177, 177, 245);
+width: 24vw;
+height: 8vh;
+display:flex;
+justify-content: center;
+align-items: center;
+border-radius: 3vw;
+box-shadow: 3px 4px 5px;
+
+font-size: large;
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+
+form input{
+
+    appearance: none;
+    color:rgb(154, 12, 12);
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: larger;
+    border: 2px solid #4193ff;
+    border-radius: 4px;
+    margin-right: 5vw;
+
+    /* color: #333; */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+
+form button{
+
+
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    border-color: red;
+    color: rgb(55, 13, 13);
+    cursor: pointer;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="heading">
+        <div class="h2div"><h2> Assam Power Distribution Company Limited </h2></div>
+        <div> <img src="./resource/apdcl logo.jpeg" alt="apdcl logo" > </div>
+        </div>
+
+        <div class="content"> 
+
+
+        <div class="headingcaption">Document Uploading Dashboard</div>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input class="file" type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+
+    </div>
+
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files Dashboard for Analysis</title>
+
+    <style>
+
+body{
+
+    margin:0;
+    padding: 0;
+}
+
+h1{
+
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(3, 96, 62);
+}
+
+
+.logodiv img{
+
+
+
+width:100vw;
+height:10vw;
+
+}
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="logodiv"> <img src="./resource/apdcl-logo.png" alt="apdcl image" srcset="">  </div>
+
+    <h1>Files Dashboard for Analysis</h1>
+
+
+
+    <div id="file-list"></div>
+
+    <script>
+        async function fetchFiles() {
+            const response = await fetch('/files');
+            const files = await response.json();
+
+            const fileList = document.getElementById('file-list');
+            files.forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.innerHTML = `
+
+                    <div style="display:flex; gap:3vw; justify-content:space-around; align-items:center; text-align:center; background: linear-gradient(to bottom, #ffffff, #f0f0f0)">
+                    <p>${file.filename} (${file.contentType})</p>
+                    <a href="/file/${file.filename}" target="_blank">View</a>
+                    <a href="/file/${file.filename}" download>Download</a>
+
+                    </div>
+                `;
+                fileList.appendChild(fileItem);
+            });
+        }
+
+        window.onload = fetchFiles;
+    </script>
+</body>
+</html>
